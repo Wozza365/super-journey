@@ -2,13 +2,13 @@
 import { ref } from "vue";
 
 const allClues = [
-  { text: "🦵🦵🦵 (3 legs)" },
-  { text: "✈️✈️ 1h 20m from London Gatwick ✈️✈️" },
-  { text: "👑👑 British Crown Dependency 👑👑"}
+  { emoji:"🦵🦵🦵", text: "(3 legs)" },
+  { emoji: "✈️✈️", text: "1h 20m from London Gatwick" },
+  { emoji: "👑👑", text: "British Crown Dependency"}
 ]
 
 const count = ref(0);
-const clues = ref<{ text: string; img?: string }[]>([]);
+const clues = ref<{ text: string; emoji?:string; img?: string }[]>([]);
 
 const giveClue = () => {
   clues.value.push(allClues[count.value]);
@@ -18,9 +18,10 @@ const giveClue = () => {
 
 <template>
   <div style="display: grid; gap: 20px">
-    <div v-for="clue in clues" :key="clue.text" style="font-family: Tahoma; font-size: 36px">
+    <div v-for="clue in clues" :key="clue.text" style="display: grid; gap: 5px">
+      <p style="font-family: Tahoma; font-size: 24px">{{ clue.emoji }}</p>
+      <p style="font-family: Tahoma; font-size: 24px">{{ clue.text }}</p>
       <img v-if="clue.img" :src="clue.img" />
-      {{  clue.text }}
 
     </div>
 
