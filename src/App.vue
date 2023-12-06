@@ -16,7 +16,7 @@ const giveClue = () => {
 
 <template>
   <div>
-    <div v-for="clue in clues" :key="clue">
+    <div v-for="clue in clues" :key="clue.text">
       {{  clue.text }}
     </div>
 
