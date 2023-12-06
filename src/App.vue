@@ -8,7 +8,9 @@ const allClues = [
   { emoji: "🚋🚋", text: "Steam trains!" },
   { emoji: "🏝️🏝️", text: "It's an island!" },
   { emoji: "❌❌", text: "It's not Ireland or Northern Ireland" },
-  { emoji: "🇬🇧🇬🇧", text: "No visa or passport required" }
+  { emoji: "🇬🇧🇬🇧", text: "No visa or passport required" },
+  { text: "Looks like this", img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Isle_of_Man_outline_map.png,"},
+  { text: "Location: ", img: "https://ibb.co/YPQ1QXb"}
 ]
 
 const count = ref(0);
