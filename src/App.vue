@@ -10,32 +10,39 @@ const allClues = [
   { emoji: "❌❌", text: "It's not Ireland or Northern Ireland" },
   { emoji: "🇬🇧🇬🇧", text: "No visa or passport required" },
   { text: "Looks like this", img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Isle_of_Man_outline_map.png"},
-  { text: "Location: ", img: "https://ibb.co/YPQ1QXb"}
+  { text: "Location: ", img: "https://i.ibb.co/RYbsbN7/IoM.png"}
 ]
 
 const count = ref(0);
 const clues = ref<{ text: string; emoji?:string; img?: string }[]>([]);
 
+const answer = ref("");
+
 const giveClue = () => {
   clues.value.push(allClues[count.value]);
   count.value++;
+  window.scrollTo(0, document.body.scrollHeight);
 }
 </script>
 
 <template>
   <div style="display: grid; gap: 20px">
+    <p v-if="count === 0" style="font-family: Tahoma; font-size: 36px">Gotta guess your gift :P</p>
     <transition-group name="list">
       <div v-for="clue in clues" :key="clue.text" style="display: grid; gap: 5px">
-        <p style="font-family: Tahoma; font-size: 24px">{{ clue.emoji }}</p>
+        <p style="font-family: Tahoma; font-size: 36px">{{ clue.emoji }}</p>
         <p style="font-family: Tahoma; font-size: 24px">{{ clue.text }}</p>
         <img v-if="clue.img" :src="clue.img" style="width: 100%" />
       </div>
     </transition-group>
 
 
-    <button @click="giveClue">Give me a clue!</button>
+    <button @click="giveClue" style="padding: 16px; font-size: 24px;">Give me a clue!</button>
 
-    <input type="text" placeholder="Take a guess!!!" />
+    <input type="text" v-model="answer" placeholder="Take a guess!!!" style="
+      padding: 16px;
+      font-size: 24px;
+    " />
   </div>
 </template>
 
