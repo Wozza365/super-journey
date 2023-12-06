@@ -9,7 +9,7 @@ const allClues = [
   { emoji: "🏝️🏝️", text: "It's an island!" },
   { emoji: "❌❌", text: "It's not Ireland or Northern Ireland" },
   { emoji: "🇬🇧🇬🇧", text: "No visa or passport required" },
-  { text: "Looks like this", img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Isle_of_Man_outline_map.png,"},
+  { text: "Looks like this", img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Isle_of_Man_outline_map.png"},
   { text: "Location: ", img: "https://ibb.co/YPQ1QXb"}
 ]
 
@@ -27,7 +27,7 @@ const giveClue = () => {
     <div v-for="clue in clues" :key="clue.text" style="display: grid; gap: 5px">
       <p style="font-family: Tahoma; font-size: 24px">{{ clue.emoji }}</p>
       <p style="font-family: Tahoma; font-size: 24px">{{ clue.text }}</p>
-      <img v-if="clue.img" :src="clue.img" />
+      <img v-if="clue.img" :src="clue.img" style="width: 100%" />
 
     </div>
 
