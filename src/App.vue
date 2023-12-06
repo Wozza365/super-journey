@@ -2,11 +2,13 @@
 import { ref } from "vue";
 
 const allClues = [
-  { text: "🦵🦵🦵 (3 legs)" }
+  { text: "🦵🦵🦵 (3 legs)" },
+  { text: "✈️✈️ 1h 20m from London Gatwick ✈️✈️" },
+  { text: "👑👑 British Crown Dependency 👑👑"}
 ]
 
 const count = ref(0);
-const clues = ref<{ text: string }[]>([]);
+const clues = ref<{ text: string; img?: string }[]>([]);
 
 const giveClue = () => {
   clues.value.push(allClues[count.value]);
@@ -15,9 +17,11 @@ const giveClue = () => {
 </script>
 
 <template>
-  <div>
+  <div style="display: grid; gap: 10px">
     <div v-for="clue in clues" :key="clue.text">
+      <img v-if="clue.img" :src="clue.img" />
       {{  clue.text }}
+
     </div>
 
     <button @click="giveClue">Give me a clue!</button>
