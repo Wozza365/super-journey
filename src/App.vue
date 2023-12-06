@@ -4,7 +4,11 @@ import { ref } from "vue";
 const allClues = [
   { emoji:"🦵🦵🦵", text: "(3 legs)" },
   { emoji: "✈️✈️", text: "1h 20m from London Gatwick" },
-  { emoji: "👑👑", text: "British Crown Dependency"}
+  { emoji: "👑👑", text: "British Crown Dependency"},
+  { emoji: "🚋🚋", text: "Steam trains!" },
+  { emoji: "🏝️🏝️", text: "It's an island!" },
+  { emoji: "❌❌", text: "It's not Ireland or Northern Ireland" },
+  { emoji: "🇬🇧🇬🇧", text: "No visa or passport required" }
 ]
 
 const count = ref(0);
