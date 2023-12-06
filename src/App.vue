@@ -47,13 +47,15 @@ const giveClue = () => {
     " />
   </div>
   <div v-else style="display: grid; gap: 20px">
-    <img src="https://cdn.britannica.com/52/1752-050-06659B9E/Flag-Isle-of-Man.jpg" />
+    <img src="https://cdn.britannica.com/52/1752-050-06659B9E/Flag-Isle-of-Man.jpg" width="100%" />
     <p>✈️ London Gatwick -> Douglas 08:00 21/03/2024</p>
     <p>✈️ Douglas -> London Gatwick 20:00 24/03/2024</p>
-    <p>Sea view hotel ⛵⛵</p>1
+    <p>Sea view hotel ⛵⛵</p>
     <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/36845289.jpg?k=3ba11e74cf48a9b38aeca54bea0528d9ba311a27c315575036464303bd4576a5&o=" width="100%" />
-    <p>Snaefell mountain</p>
+    <p>Some of the scenery:</p>
     <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/FF50/production/_102606356_mediaitem102606355.jpg" width="100%" />
+    <img src="https://a.cdn-hotels.com/gdcs/production148/d743/0e2ef5ac-c2b9-47c1-9e4c-3bacea6ed58b.jpg" width="100%" />
+    <img src="https://a.cdn-hotels.com/gdcs/production148/d743/0e2ef5ac-c2b9-47c1-9e4c-3bacea6ed58b.jpg" width="100%" />
   </div>
 </template>
 
