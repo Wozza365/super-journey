@@ -39,7 +39,7 @@ const giveClue = () => {
     </transition-group>
 
 
-    <button @click="giveClue" style="padding: 16px; font-size: 24px;">Give me a clue!</button>
+    <button @click="giveClue" style="padding: 16px; font-size: 24px;" :disabled="clues.length === allClues.length">Give me a clue!</button>
 
     <input type="text" v-model="answer" placeholder="Take a guess!!!" style="
       padding: 16px;
