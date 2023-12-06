@@ -24,12 +24,14 @@ const giveClue = () => {
 
 <template>
   <div style="display: grid; gap: 20px">
-    <div v-for="clue in clues" :key="clue.text" style="display: grid; gap: 5px">
-      <p style="font-family: Tahoma; font-size: 24px">{{ clue.emoji }}</p>
-      <p style="font-family: Tahoma; font-size: 24px">{{ clue.text }}</p>
-      <img v-if="clue.img" :src="clue.img" style="width: 100%" />
+    <transition-group name="list">
+      <div v-for="clue in clues" :key="clue.text" style="display: grid; gap: 5px">
+        <p style="font-family: Tahoma; font-size: 24px">{{ clue.emoji }}</p>
+        <p style="font-family: Tahoma; font-size: 24px">{{ clue.text }}</p>
+        <img v-if="clue.img" :src="clue.img" style="width: 100%" />
+      </div>
+    </transition-group>
 
-    </div>
 
     <button @click="giveClue">Give me a clue!</button>
 
@@ -49,5 +51,23 @@ const giveClue = () => {
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.list-move, /* apply transition to moving elements */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
 }
 </style>
