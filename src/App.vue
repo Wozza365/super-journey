@@ -6,7 +6,7 @@ const allClues = [
 ]
 
 const count = ref(0);
-const clues = ref<{ text: string }>([]);
+const clues = ref<{ text: string }[]>([]);
 
 const giveClue = () => {
   clues.value.push(allClues[count.value]);
