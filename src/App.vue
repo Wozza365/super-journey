@@ -17,8 +17,8 @@ const giveClue = () => {
 </script>
 
 <template>
-  <div style="display: grid; gap: 10px">
-    <div v-for="clue in clues" :key="clue.text">
+  <div style="display: grid; gap: 20px">
+    <div v-for="clue in clues" :key="clue.text" style="font-family: Tahoma; font-size: 36px">
       <img v-if="clue.img" :src="clue.img" />
       {{  clue.text }}
 
