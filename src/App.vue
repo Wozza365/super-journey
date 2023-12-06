@@ -22,7 +22,7 @@ const giveClue = () => {
   clues.value.push(allClues[count.value]);
   count.value++;
   setTimeout(() => {
-    window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight + 50);
   }, 1000)
 }
 </script>
