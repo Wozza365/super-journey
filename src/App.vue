@@ -23,7 +23,7 @@ const giveClue = () => {
   count.value++;
   setTimeout(() => {
     window.scrollTo(0, document.body.scrollHeight);
-  }, 100)
+  }, 1000)
 }
 </script>
 
@@ -55,7 +55,7 @@ const giveClue = () => {
     <p>Some of the scenery:</p>
     <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/FF50/production/_102606356_mediaitem102606355.jpg" width="100%" />
     <img src="https://a.cdn-hotels.com/gdcs/production148/d743/0e2ef5ac-c2b9-47c1-9e4c-3bacea6ed58b.jpg" width="100%" />
-    <img src="https://a.cdn-hotels.com/gdcs/production148/d743/0e2ef5ac-c2b9-47c1-9e4c-3bacea6ed58b.jpg" width="100%" />
+    <img src="https://www.celtictrailswalkingholidays.co.uk/wp-content/uploads/2012/02/Peel-Castle.jpg" width="100%" />
   </div>
 </template>
 
